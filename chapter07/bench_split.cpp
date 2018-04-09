@@ -4,7 +4,7 @@ typedef vector<string>::iterator iter;
 
 int main()
 {
-    string s = "hello world";
+    string s = "hello world think out of the box";
     vector<string> vec_str = split(s);
 
     iter i = vec_str.begin();
