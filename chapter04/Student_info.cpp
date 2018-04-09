@@ -29,7 +29,7 @@ istream& read_hw(istream& in, vector<double>& hw)
 
        double x;
        int num = 0;
-       while(in >> x && ++num < 5) {
+       while(i++num < 5 && n >> x) {
            hw.push_back(x);
        }
 

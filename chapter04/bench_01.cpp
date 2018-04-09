@@ -12,8 +12,21 @@
 
 int main()
 {
-   Student_info s; 
-   read(cin, s);
-   cout << grade(s) << endl;;
+    Student_info s;
+    int num = 0;
+    vector<Student_info> vs;
+
+    cout << "input-name:" << endl;
+    while(++num < 4 && read(cin, s)) {
+        cout << "input-name:" << endl;
+        vs.push_back(s);
+    } 
+
+    sort(vs.begin(), vs.end(), compare);
+
+    for (vector<Student_info>::iterator i = vs.begin(); i != vs.end(); i++) {
+        cout << i->name << grade(*i) << endl;
+    }
+    //cout << grade(s) << endl;
 }
 
