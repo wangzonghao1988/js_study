@@ -29,7 +29,7 @@ double median(vector<double> vec)
     return size % 2 == 0 ? (vec[mid] + vec[mid-1]) / 2 : vec[mid];
 }
 
-double grade( double midterm,  double final,  vector<double>& hw)
+double grade(double midterm, double final, vector<double>& hw)
 {
     if (hw.size() == 0)
         throw domain_error("student has done no homework");
@@ -38,7 +38,7 @@ double grade( double midterm,  double final,  vector<double>& hw)
 
 }
 
-double grade( Student_info& s)
+double grade(Student_info& s)
 {
     return grade(s.midterm, s.final, s.homework);
 }
