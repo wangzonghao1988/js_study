@@ -10,7 +10,7 @@
 #ifndef GUARD_Student_info
 #define GUARD_Student_info
 
-#include "../head.hpp"
+#include "../../head.hpp"
 
 struct Student_info {
     string name;   

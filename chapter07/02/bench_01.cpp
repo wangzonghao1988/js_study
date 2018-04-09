@@ -9,6 +9,9 @@
 ******************************************************************/
 #include "Student_info.hpp"
 #include "grade.hpp"
+#include "assign_range.hpp"
+
+#define TOTAL_STUDENT_NUM 3
 
 int main()
 {
@@ -17,16 +20,21 @@ int main()
     vector<Student_info> vs;
 
     cout << "input-name:" << endl;
-    while(++num < 4 && read(cin, s)) {
+    while(++num <= 3 && read(cin, s)) {
         cout << "input-name:" << endl;
         vs.push_back(s);
     } 
 
-    sort(vs.begin(), vs.end(), compare);
+    map<char, vector<string> > name_grade = assign_range(vs);
 
-    for (vector<Student_info>::iterator i = vs.begin(); i != vs.end(); i++) {
-        cout << i->name << grade(*i) << endl;
+    for(map<char, vector<string> >::iterator i = name_grade.begin(); i != name_grade.end(); i++){
+        cout << i->first << " ";
+        for ( vector<string>::iterator j = (i->second).begin(); j != (i->second).end(); j++) {
+            cout << *j << " ";
+        }
+        cout << endl;
     }
-    //cout << grade(s) << endl;
+
+    return 0;
 }
 
