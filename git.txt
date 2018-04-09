@@ -58,10 +58,10 @@ ssh-agent -k
 
 　　git init 初始化目标仓库
 
-     git remote add XX git@github.com:MYNAME/MYPRO.git  建立个快捷命名
+     git remote add acce git@github.com:wangzonghao1988/js_study.git  建立个快捷命名
 
-     git pull -u XX master 载入
+     git pull -u acce master 载入
 
 　　其他操作后，提交回服务器
 
-     git push -u XX master
+     git push -u acce master
