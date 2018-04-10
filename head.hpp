@@ -22,6 +22,7 @@
 #include <stdexcept>
 #include <cstdlib>
 #include <fstream>
+#include <cctype>
 
 using namespace std;
 
