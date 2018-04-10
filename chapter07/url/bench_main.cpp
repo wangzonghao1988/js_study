@@ -14,12 +14,19 @@ int main()
     string s = "asdfdsfdsf  ksdflsdfskdf http://www.baidu.com/~ dskfsdjfkdslf http://www.qq.com%^& skdfjsdlflds";
 
     ifstream ifs("1.txt");
-    vector<string> vs = find_urls(ifs);
+    map<string,vector<int> > ret = find_urls(ifs);
 
-    vector<string>::iterator i = vs.begin();
-    for (i = vs.begin(); i != vs.end(); i++) {
-        cout << *i << endl;
+    for (map<string, vector<int> >::const_iterator it = ret.begin(); it != ret.end(); ++it) {
+        cout << it->first << " occurs on line(s): ";
+
+        vector<int>::const_iterator line_it = it->second.begin();
+        cout << *line_it; 
+        ++line_it;
+        while (line_it != it->second.end()) {
+            cout << ", " << *line_it;
+            ++line_it;
+        }
+        cout << endl;
     }
-
     return 0;
 }

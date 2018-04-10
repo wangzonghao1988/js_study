@@ -29,11 +29,15 @@ vector<string> find_urls(const string& s)
     return ret;
 }
 
-vector<string> find_urls(istream& is)
+map<string, vector<int> > find_urls(istream& is)
 {
-    vector<string> ret; 
-    string line; 
+    map<string, vector<int> > m_vec;
+
+    string line;
+    int line_num = 0;
+
     while(getline(is, line)) {
+        line_num ++;
         typedef string::const_iterator iter;
         iter b = line.begin(), e = line.end();
 
@@ -41,13 +45,14 @@ vector<string> find_urls(istream& is)
            b = url_beg(b, e); 
 
            if (b != e) {
-           iter after = url_end(b, e);
-           ret.push_back(string(b, after));
-           b = after;
+               iter after = url_end(b, e);
+               m_vec[string(b, after)].push_back(line_num);
+               b = after;
            }
         }
     }
-    return ret;
+
+    return m_vec;
 }
 
 string::const_iterator url_end(string::const_iterator b, string::const_iterator e)

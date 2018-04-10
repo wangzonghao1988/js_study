@@ -10,7 +10,7 @@
 #include "../../head.hpp"
 vector<string> find_urls(const string&);
 
-vector<string> find_urls(istream&);
+map<string,vector<int> > find_urls(istream&);
 
 string::const_iterator url_end(string::const_iterator ,string::const_iterator );
 
