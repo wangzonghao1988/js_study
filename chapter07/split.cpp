@@ -36,7 +36,7 @@ vector<string> split(const string & str)
 
         i = j;
     }
-
+    ret.erase(unique(ret.begin(), ret.end()), ret.end());
     return ret;
 }
 

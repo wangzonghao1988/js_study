@@ -14,10 +14,10 @@ int main()
 {
     //call xref using split by default
     map<string, vector<int> > ret = xref(cin);
+#if 0
+    //sort by value
     vector<pair<string, vector<int> > > map_vector;
     sortMapByValue(ret, map_vector); 
-    //sort by value
-#if 1
     for (int i = 0; i < map_vector.size(); i++) { 
         cout << map_vector[i].first << ":";
         for (vector<int>::iterator j = map_vector[i].second.begin(); j != map_vector[i].second.end(); j++) {
