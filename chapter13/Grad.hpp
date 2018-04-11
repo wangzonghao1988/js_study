@@ -8,7 +8,6 @@
 #
 ******************************************************************/
 #include "Core.hpp"
-#include "../head.hpp"
 
 class Grad: public Core {
 public:

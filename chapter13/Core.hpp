@@ -29,16 +29,18 @@ private:
 
 inline bool compare(const Core& c1, const Core& c2)
 {
-    return c1.name() < c2.name();
+	return c1.name() < c2.name();
 }
-/*
+
+
 inline bool compare_grades(const Core& c1, const Core& c2)
 {
-    return c1.grade() < c2.grade();
+	return c1.grade() < c2.grade();
 }
-*/
+
+
 inline bool compare_Core_ptrs(const Core* c1, const Core* c2)
 {
-    return compare(*c1, *c2);
+	return compare(*c1, *c2);
 }
 
