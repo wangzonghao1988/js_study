@@ -65,3 +65,8 @@ ssh-agent -k
 　　其他操作后，提交回服务器
 
      git push -u acce master
+
+
+函数模块化，集成测试，编译
+github/svn 版本控制
+
