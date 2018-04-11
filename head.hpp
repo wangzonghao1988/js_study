@@ -23,6 +23,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <cctype>
+#include <numeric>
 
 using namespace std;
 
