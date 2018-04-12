@@ -19,7 +19,7 @@ protected:
 public:
   Core():midterm(0), final(0) {};
   Core(istream& is) { read(is); };
-  virtual ~Core(){}
+  virtual ~Core(){cerr << "Core::~Core()" << endl;}
   string name() const;
   virtual istream& read(istream&);
   virtual double grade() const;
