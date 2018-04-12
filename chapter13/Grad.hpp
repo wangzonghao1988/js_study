@@ -10,6 +10,8 @@
 #include "Core.hpp"
 
 class Grad: public Core {
+protected:
+	Grad* clone() const {return new Grad(*this); }
 public:
     Grad(): thesis(0) {};
     Grad(istream& is) { read(is); }
