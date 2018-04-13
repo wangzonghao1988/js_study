@@ -7,7 +7,7 @@
 #             Create: 2018-04-12 10:54:52
 #
 ******************************************************************/
-#include "Grad.hpp"
+#include "student_info.hpp"
 
 istream& student_info::read(istream& is)
 {

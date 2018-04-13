@@ -47,3 +47,10 @@ istream& Core::read_hw(istream& in)
         }
         return in;
 }
+
+char Core::credit()
+{
+    double g = grade();
+    g >= 60 ? c = 'P' : c = 'F';
+	return c;
+}

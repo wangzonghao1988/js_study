@@ -15,9 +15,10 @@ protected:
 public:
     Grad(): thesis(0) {};
     Grad(istream& is) { read(is); }
-	~Grad() {cerr << "Grade :: ~Grade()" << endl;}
+	~Grad() {}
 	istream& read(istream&);
     double grade() const;
+	bool valid() const {return Core::valid() && thesis > 60; }
 private:
     double thesis;
 };

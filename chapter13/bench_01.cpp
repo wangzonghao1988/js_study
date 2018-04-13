@@ -20,13 +20,13 @@ int main()
         if (ch == 'u') {
             record = new Core;
             cout << "underg: " << endl;
-		}
+        }
         else if (ch == 'g') {
             record = new Grad;
             cout << "grad:" << endl;
         } else {
             break;
-		}
+        }
         record->read(cin);
         maxlen = max(maxlen, record->name().size());
         students.push_back(record);
@@ -38,9 +38,9 @@ int main()
         try {
             double final_grade = students[i]->grade();
             cout << final_grade << endl;
-		}catch(domain_error e){
+        }catch(domain_error e){
             cout << e.what() << endl;
-		}
+        }
         delete students[i];
     }
     return 0;
