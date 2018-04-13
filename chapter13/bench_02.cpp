@@ -26,7 +26,7 @@ int main()
 		if (!students[i].valid()) {
 			cout << "not valid." << endl;
 		}
-		
+
         try {
             double final_grade = students[i].grade();
 			char c = students[i].credit();

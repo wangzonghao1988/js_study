@@ -28,7 +28,7 @@ public:
         else throw runtime_error("undo homework!");
     }
 
-    double grade() const {
+    virtual double grade() const {
         if (cp) return cp->grade();
         else throw runtime_error("uninitialized student!");
     }
@@ -43,7 +43,7 @@ public:
         return s1.name() < s2.name();
     }
 
-private:
+protected:
     Core* cp;
 };
 
