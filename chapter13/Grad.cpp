@@ -2,8 +2,8 @@
 #
 #                    Filename: Grad.cpp
 #
-#                    Author: 4ever-young                      
-#                    Description: ----                          
+#                    Author: 4ever-young
+#                    Description: ----
 #             Create: 2018-04-11 17:39:24
 #
 ******************************************************************/
