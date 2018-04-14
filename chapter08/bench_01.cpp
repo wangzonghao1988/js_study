@@ -12,7 +12,12 @@
 int main()
 {
     string s;
-    while(getline(cin, s))
+    string s2;
+	string s3;
+    while(getline(cin, s)) {
         split(s, ostream_iterator<string>(cout, "\n"));
+        my_copy(s.begin(), s.end(), back_inserter(s2));
+        cout << s2 << endl;
+    }
     return 0;
 }

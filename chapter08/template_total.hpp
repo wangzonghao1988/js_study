@@ -20,7 +20,7 @@ inline bool notspace(char c)
 }
 
 template <class In, class X>
-In find(In begin, In end, const X& x)
+In my_find(In begin, In end, const X& x)
 {
     while (begin != end && *begin != x)
         begin ++;
@@ -60,3 +60,39 @@ void split(const string& str, Out os) {
         i = j;
     }
 }
+
+template<class In, class Out>
+Out my_copy(In begin, In end, Out dest)
+{
+    while (begin != end)
+        *dest++ = *begin++;
+    return dest;
+}
+
+template<class For, class X>
+void my_replace(For beg, For end, const X &x, const X &y)
+{
+    while (beg != end) {
+        if (*beg = y)
+            *beg = x;
+            beg ++;
+    }
+}
+
+template <class Ran, class X>
+bool binary_search(Ran begin, Ran end, const X& x)
+{
+    while(begin < end) {
+        Ran mid = begin + (end - begin) / 2;
+        if (*mid < x)
+            begin = mid;
+        else if (*mid > x)
+            end = mid;
+        else
+            return true;
+    }
+
+    return false;
+}
+
+
